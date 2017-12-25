@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	   
+	     /* body{
+	     	hover要兼容IE6的话，要在此引用csshover.htc文件，即：
+	     	behavior:url(csshover.htc);
+	     } */
+		.top-nav{
+			font-size: 14px;
+			font-weight: bold;
+			list-style: none;
+			/* border-bottom: 8px solid #E5603E;
+			overflow: hidden; */
+		}
+		.top-nav li{
+			float: left;
+			margin-right: 1px;
+		}
+		.top-nav li a{
+			line-height: 20px;
+			text-decoration: none;
+			background-color: #ddd;
+			color: #666;
+			display: block;
+			width: 80px;
+			text-align: center;
+		}
+		.top-nav li ul{
+			display: none;
+			list-style: none;
+			padding: 0px;
+			position: relative;
+
+			width: 80px;
+		} 
+
+		.top-nav li ul li ul{
+			position: absolute;
+			top: 0;
+			left: 81px;
+		}
+
+		/* .top-nav li:hover ul{
+			display: block;
+			
+		}
+		.top-nav li:hover ul li ul{
+			display: none;
+		}
+		
+		.top-nav li ul li:hover ul{
+			display: block;
+		} */
+	</style>
+
+	<script type="text/javascript" src="../jquery.min.js"></script>
+	<script type=text/javascript>
+		$(function(){
+			$("li").has("ul").mouseover(function(){
+				$(this).children("ul").css("display","block");
+			}).mouseout(function(){
+				$(this).children("ul").css("display","none");
+			})
+		});
+	</script>
+</head>
+<body>
+	<div >
+		<ul class="top-nav">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">课程大厅</a></li>
+			<li><a href="#">学习中心+</a>
+			    <ul>
+			    	<li><a href="#">前端课程+</a>
+			    	    <ul>
+			    	    	<li><a href="#">javascript</a></li>
+			    	    	<li><a href="#">css</a></li>
+			    	    	<li><a href="#">jquery</a></li>
+			    	    </ul>
+			    	</li>
+			    	<li><a href="#">手机开发</a></li>
+			    	<li><a href="#">后台编程</a></li>
+			    </ul>
+			</li>
+			<li><a href="#">关于我们</a></li>
+		</ul>
+	</div>
+</body>
+</html>

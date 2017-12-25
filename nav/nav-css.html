@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	    *{
+	    	margin: 0px;
+	    	padding: 0px;
+	    }
+		#nav{
+			background-color: #eee;
+			width: 600px;
+			height: 40px;
+			margin: 0 auto;
+		}
+		ul{
+			list-style: none;
+		}
+		ul li{
+			float: left;
+			/* padding: 0 10px; */
+			/* 代替固定width: 90px;达到自适应 */
+			line-height: 40px;
+			text-align: center;/* li相对于ul水平居中 */
+			position: relative;
+		}
+		a{
+			text-decoration: none;
+			color: #000;
+			display: block;/* 行内元素变块级元素 */
+			padding: 0 10px;
+		}
+		a:hover{
+			color: #fff;
+			background-color: #666;
+		}
+		ul li ul li{
+			float: none;
+			background-color: #eee;
+			margin-top: 2px ;
+		}
+		ul li ul{
+			position: absolute;
+			left: 0px;
+			top: 40px;
+			display: none;
+		}
+		ul li ul li a:hover{
+			background-color: #4A34CD;
+		}
+		ul li:hover ul{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div id="nav">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">课程大厅</a>
+			    <ul>
+			    	<li><a href="#">javascript</a></li>
+			    	<li><a href="#">jquery</a></li>
+			    	<li><a href="#">html/css</a></li>
+			    </ul>
+			</li>
+			<li><a href="#">学习中心</a>
+			    <ul>
+			    	<li><a href="#">视频学习</a></li>
+			    	<li><a href="#">案列练习</a></li>
+			    	<li><a href="#">问与答</a></li>
+			    </ul>
+			</li>
+			<li><a href="#">经典案例</a></li>
+			<li><a href="#">关于我们</a></li>
+		</ul>
+	</div>
+</body>
+</html>
