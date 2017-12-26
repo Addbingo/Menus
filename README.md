@@ -1,6 +1,5 @@
-# Menus
-# Menus
-### hover要兼容IE6的话，要在此引用csshover.htc文件，即：  
+## Menus简单笔记
+### hover要兼容IE6的话，要在此引用csshover.htc文件，即：
 ```bash
 body{
   behavior:url(csshover.htc);
